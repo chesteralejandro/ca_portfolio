@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="An Online Portfolio of Chester M Alejandro.">
+    <meta name="keywords" content="chester alejandro, portfolio, web developer, frontend">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da2c684bf8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="icon" href="./styling/images/Chester-logo-transparent.png">
+    <link rel="stylesheet" href="./styling/style.css">
+    <title>Chester Alejandro | Online Portfolio</title>
+</head>
+<body>
+    <header class="main__header" id="home">
+        <nav class="navigation">
+            <div class="navigation__flex container">
+                <div class="navigation__box">
+                    <a href="#home" class="navigation__logo">
+                        <h1 class="navigation__text">
+                            <span class="navigation__logo-color">CA</span> Portfolio
+                        </h1>
+                    </a>
+                </div>
+                <div class="navigation__burger">
+                    <div class="navigation__burger-line"></div>
+                    <div class="navigation__burger-line"></div>
+                    <div class="navigation__burger-line"></div>
+                </div>
+                <ul class="navigation__link">
+                    <li class="navigation__list"><a href="#services" class="navigation__anchor">Services<span class="navigation__effect">Services</span></a></li>
+                    <li class="navigation__list"><a href="#about" class="navigation__anchor">About Me<span class="navigation__effect">About Me</span></a></li>
+                    <li class="navigation__list"><a href="#work" class="navigation__anchor">My Works<span class="navigation__effect">My Works</span></a></li>
+                    <li class="navigation__list"><a href="#contact" class="navigation__anchor">Contact<span class="navigation__effect">Contact</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="banner">
+            <div class="container">
+                <div class="banner__box">
+                    <h2 class="banner__greeting">Hello,
+                        <span class="banner__color">Welcome</span> To My Website.</h2>
+                    <h3 class="banner__introduction"> My Name is Chester Alejandro <br/>
+                        I am a <span class="banner__cursor"></span>
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="main__content">
+        <section class="services" id="services">
+            <div class="container--full">
+                <section class="services__box">
+                    <h2 class="services__heading">What I Can Do.</h2>
+                    <p class="services__statement">
+                        As a new developer, I create simple websites that can help people put their identity and ideas 
+                        on the web and help them expand their network across the internet.
+                    </p>
+                </section>
+                <section class="services__items">
+                    <div class="services__cards services__cards--right">
+                        <img class="services__image" src="./styling/images/programming.png" alt="Web Development">
+                        <h3 class="services__title">Web Development</h3>
+                        <p class="services__description">Develop website to help you achieve what you want.</p>
+                    </div>
+                    <div class="services__cards services__cards--left">
+                        <img class="services__image" src="./styling/images/web-design.png" alt="Web Design">
+                        <h3 class="services__title">Style</h3>
+                        <p class="services__description">Design your website to become more appealing to the eyes.</p>
+                    </div>
+                    <div class="services__cards services__cards--right">
+                        <img class="services__image" src="./styling/images/responsive.png" alt="responsive web design">
+                        <h3 class="services__title">Responsive Web Design</h3>
+                        <p class="services__description">Make your website look good across different devices.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="about" id="about"> 
+            <div class="about__flex container--full">
+                <section class="about__carousel">
+                    <input type="radio" name="radio" id="radio0" class="about__radio">
+                    <input type="radio" name="radio" id="radio1" class="about__radio" checked>
+                    <input type="radio" name="radio" id="radio2" class="about__radio">
+                    <input type="radio" name="radio" id="radio3" class="about__radio">
+                    <div class="about__frame">
+                        <img src="./styling/images/alejandro3.jpg" class="about__image" alt="Chester picture 3 duplicate" id="duplicate-image">
+                        <img src="./styling/images/alejandro1.jpg" class="about__image" alt="Chester picture 1">
+                        <img src="./styling/images/alejandro2.jpg" class="about__image" alt="Chester picture 2">
+                        <img src="./styling/images/alejandro3.jpg" class="about__image" alt="Chester picture 3">
+                        <div class="about__navigation">
+                            <label for="radio1" class="about__button about__button--label1" id="about__button1"></label>
+                            <label for="radio2" class="about__button about__button--label2" id="about__button2"></label>
+                            <label for="radio3" class="about__button about__button--label3" id="about__button3"></label>
+                        </div>
+                    </div>
+                </section>
+                <section class="about__box">
+                    <h3 class="about__heading">More About Me</h3>
+                    <p class="about__text">
+                        My name is Chester M. Alejandro. A developer from the Philippines and 
+                        I am a Bachelor of Science in Information Technology graduate. I
+                        inspire to become a Web Developer focusing on Front-end
+                        development and hopefully one day become a Full-stack developer.
+                    </p>
+                    <!-- <a href="./Chester-Resume.docx" class="about__work-button" download>Resume <i class="fas fa-download"></i></a> -->
+                    <a href="#work" class="about__work-button"><i class="fas fa-briefcase"></i> View My Works </a>
+                </section>
+            </div>
+        </section>
+
+        <section class="work" id="work">
+
+            <h2 class="work__heading">Here Are My Projects.</h2>
+
+            <div class="work__grid container">
+                <section class="work__box">
+                    <div class="work__image-box">
+                        <a href="https://www.facebook.com/minted.ph" target="_blank" class="work__overlay">
+                            <div class="work__overflow">
+                                <span class="work__word">View Project</span><i class="work__icon fas fa-arrow-alt-circle-right"></i> 
+                            </div>
+                        </a>
+                        <img src="./styling/images/mintedPH.jpg" alt="Minted PH Brand Picture" class="work__image">
+                    </div>
+                    <div class="work__content">
+                        <h3 class="work__title">Minted PH Website</h3>
+                        <p class="work__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
+                            quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
+                        </p>
+                    </div>
+                </section>
+
+                <section class="work__box">
+                    <div class="work__image-box">
+                        <a href="http://www.google.com" target="_blank" class="work__overlay">
+                            <div class="work__overflow">
+                                <span class="work__word">View Project</span><i class="work__icon fas fa-arrow-alt-circle-right"></i> 
+                            </div>
+                        </a>
+                        <img src="./styling/images/mintedPH.jpg" alt="Minted PH Brand Picture" class="work__image">
+                    </div>
+                    <div class="work__content">
+                        <h3 class="work__title">Burger Break Websites</h3>
+                        <p class="work__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
+                            quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
+                        </p>
+                    </div>
+                </section>
+
+                <section class="work__box">
+                    <div class="work__image-box">
+                        <a href="http://www.google.com" target="_blank" class="work__overlay">
+                            <div class="work__overflow">
+                                <span class="work__word">View Project</span><i class="work__icon fas fa-arrow-alt-circle-right"></i> 
+                            </div>
+                        </a>
+                        <img src="./styling/images/LoafandRoll.jpg" alt="Loaf and Roll Picture" class="work__image">
+                    </div>
+                    <div class="work__content">
+                        <h3 class="work__title">Loaf and Roll Website</h3>
+                        <p class="work__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
+                            quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+        <section class="modal">
+            <div class="modal__box">
+                <h3 class="modal__message"></h3>
+                <i class="modal__button fas fa-window-close fa-2x"></i>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main__footer">
+        <section class="contact" id="contact">
+            <div class="contact__flex container">
+                
+                <form class="contact__form" autocomplete="off">
+                    <h3 class="contact__heading">Leave Me a Message</h3>
+                    <div class="contact__form-group">
+                        <label for="contact__name" class="contact__label">Name</label>
+                        <input type="text" name="name" id="contact__name" class="contact__name" maxlength="50">
+                    </div>
+                    <div class="contact__form-group">
+                        <label for="contact__message" class="contact__label">Message</label>
+                        <textarea name="message" class="contact__message" id="contact__message"></textarea>
+                    </div>
+                    <div class="contact__form-group">
+                        <button class="contact__submit" id="contact__submit" type="submit">Send</button>
+                    </div>
+                </form>
+
+                <div class="divider"></div>
+
+                <div class="contact__information">
+                    <div class="contact__information-box">
+                        <h3 class="contact__heading">Contact Information</h3>
+                        <p class="contact__data"><i class="fas fa-map-marker-alt"></i> Las Pi&ntilde;as, Philippines</p>
+                        <p class="contact__data"><i class="fas fa-mobile-alt"></i> (+63)920-531-XXXX</p>
+                        <p class="contact__data"><i class="far fa-envelope"></i> cxxxxxxx.xxxxxxxxx@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <ul class="contact__link">
+                    <li class="contact__list">
+                        <a href="https://www.facebook.com/chester.alejandro.1/" class="contact__anchor" target="_blank">
+                            <i class="contact__icon fab fa-facebook fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="contact__list"><a href="#" class="contact__anchor"><i class="contact__icon fab fa-linkedin fa-2x"></i></a></li>
+                    <li class="contact__list">
+                        <a href="https://twitter.com/?lang=en" class="contact__anchor" target="_blank">
+                            <i class="contact__icon fab fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="contact__list">
+                        <a href="https://github.com/chesteralejandro" class="contact__anchor" target="_blank">
+                            <i class="contact__icon fab fa-github fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="author">
+            <p class="author__copyright">Copyright &copy; 2020-2021</p>
+            <p class="author__name">Developed by Chester Alejandro</p>
+        </section>
+    </footer>
+
+    
+    <script defer src="./app.js"></script>
+    <script>
+        $('document').ready(function() {
+            $('.navigation__logo, .navigation__anchor, .about__work-button').on('click', function(e) {
+                if(this.hash !== '') {
+                    e.preventDefault();
+                    let hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 60
+                    }, 1000);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

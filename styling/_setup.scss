@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 100%;
+    line-height: 1.4;
+    background-color:  #e7edf1;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: $accentColor;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+i {
+    padding-right: 5px;
+}
+
+.container {
+    width: 95%;
+    min-width: 100px;
+    max-width: 1460px;
+    margin: auto;
+}
+
+.container--full {
+    @extend .container;
+    width: 100%;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@function weight($weightName) {
+    @return map-get($fontWeight , $weightName);
+}

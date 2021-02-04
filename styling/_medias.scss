@@ -1,0 +1,204 @@
+$tablet-screen: 501px;
+@media screen and (min-width: $tablet-screen) and (max-width: 768px) {
+    .container, .container--full {
+        width: 90%;
+    }
+    .services {
+        padding: 4em 0 4em;
+        &__statement {
+            width: 100%;
+        }
+    }
+    .about {
+        padding: 1em 0 2em;
+        &__box {
+            width: 100%;
+        }
+    }
+}
+
+$normal-screen: 769px;
+@media screen and (min-width: $normal-screen) and (max-width: 1200px) {
+    .container, .container--full {
+        width: 85%;
+    }
+
+    body {
+        overflow-y: visible;
+    }
+
+    .navigation {
+        &__burger {
+            display: none;
+       } 
+       &__link {
+        position: static;
+        z-index: 1;
+        transition: none;
+        transform: translateX(0%);
+        @include flex( row, space-between, center);
+        min-width: 365.25px;
+        min-width: 60%;
+        min-height: 10%;
+        padding: 0;
+        background-color: transparent;
+        }
+        &__list {
+            font-size: 1rem;
+            transform: translate(0%);
+            opacity: 1;
+        }
+        &__effect {
+            display: none;
+        }
+    }
+   
+    .services {
+        padding: 4em 0 4em;
+        &__items {
+            @include flex(row, space-between, center);
+        }
+        &__cards {
+            flex-basis: 32%;
+            border-radius: 5px;
+            &--right {
+                transform: translate(0, 70%);
+            }
+            &--left {
+                transform: translate(0, 70%);
+            }
+        }
+        &__statement {
+            width: 100%;
+        }
+    }
+
+    .about {
+        padding: 1em 0 2em;
+        &__flex {
+            @include flex(row-reverse, space-between, center);
+        }
+        &__box {
+            width: 100%;
+            padding-right: 2em;
+        }
+        &__text {
+            text-align: justify;
+        }
+    }
+
+    .divider {
+        width: 1px;
+        height: 250px;
+        margin: 1.5em;
+        background-color:  #ababab;
+        align-self: center;
+    }
+
+    .contact {
+        &__flex {
+            @include flex(row, space-between, flex-start);
+        }
+        &__link {
+            @include flex(column, space-evenly, center);
+            height: 300px;
+            align-self: center;
+        }
+        &__icon {
+            transform: translate(0%, -200%);
+        }
+    }
+}
+
+$widescreen: 1201px;
+@media screen and (min-width: $widescreen) {
+    .container, .container--full {
+        width: 80%;
+    }
+    .navigation {
+        &__burger {
+             display: none;
+        } 
+        &__link {
+            position: static;
+            z-index: 1;
+            transform: translateX(0%);
+            @include flex( row, space-between, center);
+            min-width: 365.25px;
+            min-width: 550px;
+            min-height: 10%;
+            padding: 0;
+            background-color: transparent;
+       }
+       &__list {
+            font-size: 1rem;
+            transform: translate(0%);
+            opacity: 1;
+        }
+        &__effect {
+            display: none;
+        }
+     }
+
+    .services {
+        padding: 4em 0 5em;
+        &__items {
+            @include flex(row, space-between, center);
+        }
+        &__cards {
+            flex-basis: 32%;
+            border-radius: 5px;
+            &--right {
+                transform: translate(0, 70%);
+            }
+            &--left {
+                transform: translate(0, 70%);
+            }
+        }
+        &__statement {
+            width: 100%;
+        }
+    }
+
+    .about {
+        padding: 1em 0 2em;
+        &__flex {
+            @include flex(row-reverse, space-between, center);
+        }
+        &__box {
+            width: 100%;
+            padding-right: 2em;
+        }
+        &__text {
+            text-align: justify;
+        }
+    }
+
+    .divider {
+        width: 1px;
+        height: 270px;
+        margin: 1.3em;
+        background-color: #4D6B75;
+        align-self: center;
+    }
+
+    .contact {
+        &__flex {
+            @include flex(row, space-between, flex-start);
+        }
+        &__link {
+            @include flex(column, space-evenly, center);
+            height: 300px;
+            align-self: center;
+        }
+        &__icon {
+            transform: translate(0%, -200%);
+        }
+    }
+}
+
+// @media (orientation: landscape) {
+//     .banner__greeting {
+//         transform: translateY(1%); 
+//     }
+// }
