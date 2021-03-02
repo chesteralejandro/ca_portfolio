@@ -56,17 +56,12 @@ $normal-screen: 769px;
     .services {
         padding: 4em 0 4em;
         &__items {
+            overflow: visible;
             @include flex(row, space-between, center);
         }
         &__cards {
             flex-basis: 32%;
             border-radius: 5px;
-            &--right {
-                transform: translate(0, 70%);
-            }
-            &--left {
-                transform: translate(0, 70%);
-            }
         }
         &__statement {
             width: 100%;
@@ -143,17 +138,12 @@ $widescreen: 1201px;
     .services {
         padding: 4em 0 5em;
         &__items {
+            overflow: visible;
             @include flex(row, space-between, center);
         }
         &__cards {
             flex-basis: 32%;
             border-radius: 5px;
-            &--right {
-                transform: translate(0, 70%);
-            }
-            &--left {
-                transform: translate(0, 70%);
-            }
         }
         &__statement {
             width: 100%;

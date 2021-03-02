@@ -212,14 +212,10 @@
         &--right {
             background-color: rgba($primaryColor, 0.9);
             color: $secondaryColor;
-            transform: translateX(70%);
-            opacity: 0;
         }
         &--left {
             background-color: rgba($secondaryColor, 0.9);
             color: $primaryColor;
-            transform: translateX(-70%);
-            opacity: 0;
         }
         &:hover {
             animation: shake 1s ease;
@@ -373,6 +369,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill , minmax(200px, 460px));
         justify-content: space-evenly;
+        overflow-x: hidden;
     }
     &__heading {
         font-size: 4rem;

@@ -61,17 +61,17 @@
                     </p>
                 </section>
                 <section class="services__items">
-                    <div class="services__cards services__cards--right">
+                    <div data-show-group-up class="services__cards services__cards--right">
                         <img class="services__image" src="./styling/images/programming.png" alt="Web Development">
                         <h3 class="services__title">Web Development</h3>
                         <p class="services__description">Develop website to help you achieve what you want.</p>
                     </div>
-                    <div class="services__cards services__cards--left">
+                    <div data-show-group-up class="services__cards services__cards--left">
                         <img class="services__image" src="./styling/images/web-design.png" alt="Web Design">
                         <h3 class="services__title">Style</h3>
                         <p class="services__description">Design your website to become more appealing to the eyes.</p>
                     </div>
-                    <div class="services__cards services__cards--right">
+                    <div data-show-group-up class="services__cards services__cards--right">
                         <img class="services__image" src="./styling/images/responsive.png" alt="responsive web design">
                         <h3 class="services__title">Responsive Web Design</h3>
                         <p class="services__description">Make your website look good across different devices.</p>
@@ -118,7 +118,7 @@
             <h2 class="work__heading">Here Are My Projects.</h2>
 
             <div class="work__grid container">
-                <section class="work__box">
+                <section data-show-right class="work__box">
                     <div class="work__image-box">
                         <a href="https://www.facebook.com/minted.ph" target="_blank" class="work__overlay">
                             <div class="work__overflow">
@@ -136,7 +136,7 @@
                     </div>
                 </section>
 
-                <section class="work__box">
+                <section data-show-left class="work__box">
                     <div class="work__image-box">
                         <a href="http://www.google.com" target="_blank" class="work__overlay">
                             <div class="work__overflow">
@@ -146,7 +146,7 @@
                         <img src="./styling/images/mintedPH.jpg" alt="Minted PH Brand Picture" class="work__image">
                     </div>
                     <div class="work__content">
-                        <h3 class="work__title">Burger Break Websites</h3>
+                        <h3 class="work__title">Burger Break Website</h3>
                         <p class="work__description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
                             quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
@@ -154,7 +154,7 @@
                     </div>
                 </section>
 
-                <section class="work__box">
+                <section data-show-right class="work__box">
                     <div class="work__image-box">
                         <a href="http://www.google.com" target="_blank" class="work__overlay">
                             <div class="work__overflow">
@@ -241,7 +241,8 @@
     </footer>
 
     
-    <script defer src="./app.js"></script>
+    <script src="./app.js"></script>
+    <script src="./scrollshow.js"></script>
     <script>
         $('document').ready(function() {
             $('.navigation__logo, .navigation__anchor, .about__work-button').on('click', function(e) {

@@ -122,15 +122,15 @@ window.addEventListener("scroll", () => {
     }
     let screenSize = window.innerHeight / 1.1;
     //CARDS YOU WANT TO FADE IN WHEN YOU SCROLL
-    const servicesCards = document.querySelectorAll('.services__cards');
-    servicesCards.forEach((servicesCard, index) => {
-        let servicesCardPosition = servicesCard.getBoundingClientRect().top;
-        if(servicesCardPosition < screenSize){
-            servicesCard.style.transition = `all 1s ${index/7}s ease-in-out`;
-            servicesCard.style.transform = "translateX(0%)";
-            servicesCard.style.opacity = "1";
-        }
-    })
+    // const servicesCards = document.querySelectorAll('.services__cards');
+    // servicesCards.forEach((servicesCard, index) => {
+    //     let servicesCardPosition = servicesCard.getBoundingClientRect().top;
+    //     if(servicesCardPosition < screenSize){
+    //         servicesCard.style.transition = `all 1s ${index/7}s ease-in-out`;
+    //         servicesCard.style.transform = "translateX(0%)";
+    //         servicesCard.style.opacity = "1";
+    //     }
+    // })
     //ICONS YOU WANT TO FADE IN WHEN YOU SCROLL
     const contactLink = document.querySelector('.contact__link');
     const icons = document.querySelectorAll('.contact__icon');
