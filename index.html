@@ -52,7 +52,7 @@
 
     <main class="main__content">
         <section class="services" id="services">
-            <div class="container--full">
+            <div class="container">
                 <section class="services__box">
                     <h2 class="services__heading">What I Can Do.</h2>
                     <p class="services__statement">
@@ -61,17 +61,17 @@
                     </p>
                 </section>
                 <section class="services__items">
-                    <div data-show-group-up class="services__cards services__cards--right">
+                    <div data-show-group-up data-lean-away class="services__cards services__cards--right">
                         <img class="services__image" src="./styling/images/programming.png" alt="Web Development">
                         <h3 class="services__title">Web Development</h3>
                         <p class="services__description">Develop website to help you achieve what you want.</p>
                     </div>
-                    <div data-show-group-up class="services__cards services__cards--left">
+                    <div data-show-group-up data-lean-close class="services__cards services__cards--left">
                         <img class="services__image" src="./styling/images/web-design.png" alt="Web Design">
                         <h3 class="services__title">Style</h3>
                         <p class="services__description">Design your website to become more appealing to the eyes.</p>
                     </div>
-                    <div data-show-group-up class="services__cards services__cards--right">
+                    <div data-show-group-up data-lean-away class="services__cards services__cards--right">
                         <img class="services__image" src="./styling/images/responsive.png" alt="responsive web design">
                         <h3 class="services__title">Responsive Web Design</h3>
                         <p class="services__description">Make your website look good across different devices.</p>
@@ -81,7 +81,7 @@
         </section>
 
         <section class="about" id="about"> 
-            <div class="about__flex container--full">
+            <div class="about__flex container">
                 <section class="about__carousel">
                     <input type="radio" name="radio" id="radio0" class="about__radio">
                     <input type="radio" name="radio" id="radio1" class="about__radio" checked>
@@ -129,10 +129,10 @@
                     </div>
                     <div class="work__content">
                         <h3 class="work__title">Minted PH Website</h3>
-                        <p class="work__description">
+                        <!-- <p class="work__description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
                             quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
-                        </p>
+                        </p> -->
                     </div>
                 </section>
 
@@ -147,10 +147,10 @@
                     </div>
                     <div class="work__content">
                         <h3 class="work__title">Burger Break Website</h3>
-                        <p class="work__description">
+                        <!-- <p class="work__description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
                             quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
-                        </p>
+                        </p> -->
                     </div>
                 </section>
 
@@ -165,10 +165,10 @@
                     </div>
                     <div class="work__content">
                         <h3 class="work__title">Loaf and Roll Website</h3>
-                        <p class="work__description">
+                        <!-- <p class="work__description">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quaerat! Fuga, expedita sit 
                             quibusdam vitae illum eius doloribus laudantium inventore.sdsdsd
-                        </p>
+                        </p> -->
                     </div>
                 </section>
             </div>
@@ -189,12 +189,16 @@
                 <form class="contact__form" autocomplete="off">
                     <h3 class="contact__heading">Leave Me a Message</h3>
                     <div class="contact__form-group">
-                        <label for="contact__name" class="contact__label">Name</label>
-                        <input type="text" name="name" id="contact__name" class="contact__name" maxlength="50">
+                        <input required type="text" name="name" id="contact__name" class="contact__input" maxlength="50">
+                        <label class="contact__label">Name</label>
                     </div>
                     <div class="contact__form-group">
-                        <label for="contact__message" class="contact__label">Message</label>
-                        <textarea name="message" class="contact__message" id="contact__message"></textarea>
+                        <input required type="text" name="email" id="contact__email" class="contact__input" maxlength="50">
+                        <label class="contact__label">Email</label>
+                    </div>
+                    <div class="contact__form-group">
+                        <textarea required name="message" class="contact__message" id="contact__message"></textarea>
+                        <label class="contact__label-message">Message</label>
                     </div>
                     <div class="contact__form-group">
                         <button class="contact__submit" id="contact__submit" type="submit">Send</button>
@@ -204,11 +208,18 @@
                 <div class="divider"></div>
 
                 <div class="contact__information">
-                    <div class="contact__information-box">
-                        <h3 class="contact__heading">Contact Information</h3>
-                        <p class="contact__data"><i class="fas fa-map-marker-alt"></i> Las Pi&ntilde;as, Philippines</p>
-                        <p class="contact__data"><i class="fas fa-mobile-alt"></i> (+63)920-531-XXXX</p>
-                        <p class="contact__data"><i class="far fa-envelope"></i> cxxxxxxx.xxxxxxxxx@gmail.com</p>
+                    <h3 class="contact__heading">Contact Information</h3>
+                    <div class="contact__group">
+                        <i class="fas fa-map-marker-alt"> Address</i>
+                        <p class="contact__data"> Las Pi&ntilde;as, Philippines</p>
+                    </div>
+                    <div class="contact__group">
+                        <i class="fas fa-mobile-alt"> Phone Number</i>
+                        <p class="contact__data"> (+63) 920-531-XXXX</p>
+                    </div>
+                    <div class="contact__group">
+                        <i class="far fa-envelope"> Email Address</i>
+                        <p class="contact__data"> cxxxxxxx.xxxxxxxxx@gmail.com</p>
                     </div>
                 </div>
 
@@ -243,6 +254,7 @@
     
     <script src="./app.js"></script>
     <script src="./scrollshow.js"></script>
+    <script src="./lean.js"></script>
     <script>
         $('document').ready(function() {
             $('.navigation__logo, .navigation__anchor, .about__work-button').on('click', function(e) {

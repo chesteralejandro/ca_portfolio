@@ -121,29 +121,26 @@ window.addEventListener("scroll", () => {
         //mainNavigation.style.backdropFilter = "blur(0.4rem)";
     }
     let screenSize = window.innerHeight / 1.1;
-    //CARDS YOU WANT TO FADE IN WHEN YOU SCROLL
-    // const servicesCards = document.querySelectorAll('.services__cards');
-    // servicesCards.forEach((servicesCard, index) => {
-    //     let servicesCardPosition = servicesCard.getBoundingClientRect().top;
-    //     if(servicesCardPosition < screenSize){
-    //         servicesCard.style.transition = `all 1s ${index/7}s ease-in-out`;
-    //         servicesCard.style.transform = "translateX(0%)";
-    //         servicesCard.style.opacity = "1";
-    //     }
-    // })
     //ICONS YOU WANT TO FADE IN WHEN YOU SCROLL
     const contactLink = document.querySelector('.contact__link');
     const icons = document.querySelectorAll('.contact__icon');
     let contactLinkPosition = contactLink.getBoundingClientRect().top;
-    if(contactLinkPosition < screenSize) {
+    if(contactLinkPosition < screenSize-50) {
         icons.forEach((icon, index) => {
             icon.style.transition = `
                 transform 1000ms ${index - 0.3}s ease-out,
                 opacity 500ms ${index - 0.3}s ease-out`;
             icon.style.transform = "translate(0%, 0%)";
             icon.style.opacity = "1";
-        });
-    }
+        }); // end forEach
+    } else {
+        icons.forEach((icon, index) => {
+            icon.style.transition = "none";
+            if(window.innerWidth <= 768) icon.style.transform = "translate(-200%, 0%)";
+            else icon.style.transform = "translate(0%, -200%)";
+            icon.style.opacity = "0";
+        }); // end forEach
+    } // end else
 })
 
 
@@ -197,6 +194,7 @@ const modalMessage = document.querySelector('.modal__message');
 
 /** THESE VARIABLES ARE FOR CONTACT FORM **/
 const nameField = document.getElementById('contact__name');
+const emailField = document.getElementById('contact__email');
 const messageField = document.getElementById('contact__message');
 const submit = document.getElementById('contact__submit');
 
@@ -206,15 +204,18 @@ submit.addEventListener('click', e => {
     modal.style.visibility = "visible";
     modalBox.style.transition = "transform 300ms 30ms ease";
     modalBox.style.transform = "scale(1)";
-    if(nameField.value == '' && messageField.value == '') {
+    if(nameField.value == '' && emailField.value == '' && messageField.value == '') {
         modalMessage.innerText = 'Please say something to me.';
     } else if (nameField.value == '') {
-        modalMessage.innerText = 'What is your name?'
+        modalMessage.innerText = 'What is your name?';
+    } else if (emailField.value == '') {
+        modalMessage.innerText = 'Please provide you email address.';
     } else if (messageField.value == '') {
         modalMessage.innerText = `You forgot to say your message ${nameField.value}.`;
     }else {
         modalMessage.innerText = `Thank you ${nameField.value}, your message was sent to Chester Alejandro.`;
         nameField.value = '';
+        emailField.value = '';
         messageField.value = '';
     }
 })
