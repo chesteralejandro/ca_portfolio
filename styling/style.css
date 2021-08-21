@@ -52,25 +52,12 @@ i {
   position: fixed;
   z-index: 2;
   min-height: 50px;
-  padding: 0.6em 0;
+  padding: 0.5em 0;
   width: 100%;
   line-height: 0.77;
   letter-spacing: 0.1em;
   -webkit-transition: background 0.4s ease-in-out;
   transition: background 0.4s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .navigation__flex {
@@ -93,9 +80,9 @@ i {
   font-size: 1.2rem;
   color: #EEE;
   padding: 0.42em 0.59em;
-  border: #FFC13B solid 3px;
-  border-radius: 5px;
   min-width: 214.04px;
+  border-radius: 5px;
+  border: #FFC13B solid 3px;
 }
 
 .navigation__text {
@@ -109,6 +96,7 @@ i {
 .navigation__burger {
   border-radius: 2px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .navigation__burger-line {
@@ -278,8 +266,9 @@ i {
   font-size: clamp(3.2rem, 5vw, 3.7rem);
   font-weight: 300;
   line-height: 1.05;
-  -webkit-animation: greeting-drop 1.3s 1s ease-in;
-          animation: greeting-drop 1.3s 1s ease-in;
+  opacity: 0;
+  -webkit-animation: greeting-drop 1.3s 500ms forwards ease-in;
+          animation: greeting-drop 1.3s 500ms forwards ease-in;
 }
 
 @-webkit-keyframes greeting-drop {
@@ -444,30 +433,32 @@ i {
 
 .about #radio0:checked ~ .about__frame .about__button--label3 {
   background: #FFC13B;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scaleY(1.4);
+          transform: scaleY(1.4);
 }
 
 .about #radio1:checked ~ .about__frame .about__button--label1 {
   background: #FFC13B;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scaleY(1.4);
+          transform: scaleY(1.4);
 }
 
 .about #radio2:checked ~ .about__frame .about__button--label2 {
   background: #FFC13B;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scaleY(1.4);
+          transform: scaleY(1.4);
 }
 
 .about #radio3:checked ~ .about__frame .about__button--label3 {
   background: #FFC13B;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scaleY(1.4);
+          transform: scaleY(1.4);
 }
 
 .about__frame {
   width: 100%;
+  max-width: 547px;
+  margin: auto;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,7 +469,7 @@ i {
 
 .about__image {
   display: block;
-  width: 100%;
+  min-width: 100%;
   -webkit-transition: all 1.5s ease-in-out;
   transition: all 1.5s ease-in-out;
 }
@@ -655,10 +646,13 @@ i {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 0 0.5em;
+  color: #FFC13B;
+  font-size: 2.5rem;
   opacity: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
   background: rgba(29, 60, 69, 0.7);
   z-index: 1;
+  letter-spacing: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,10 +666,6 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFC13B;
-  font-size: 2.5rem;
-  font-size: clamp(2rem, 3vw, 2.5rem);
-  letter-spacing: 2px;
 }
 
 .work__overflow {
@@ -738,11 +728,11 @@ i {
 .modal__box {
   position: relative;
   min-width: 270px;
-  width: 30%;
-  height: 60%;
+  width: 70%;
+  height: 80%;
   max-height: 450px;
   padding: 2.5em;
-  background: white;
+  background: #1D3C45;
   border-radius: 10px;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -766,22 +756,27 @@ i {
 }
 
 .modal__message {
-  color: #1D3C45;
+  color: #EEE;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
 }
 
 .modal__button {
   color: #FFC13B;
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 3%;
+  right: 3%;
   cursor: pointer;
 }
 
 .modal__button:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.modal__name {
+  color: #FFC13B;
 }
 
 .main__footer {
@@ -935,7 +930,7 @@ i {
 }
 
 .contact__data {
-  color: #fff;
+  color: #EEE;
   text-align: center;
   font-weight: 200;
   padding: 0.5em 0;
@@ -1082,6 +1077,12 @@ i {
   }
   .about__box {
     width: 45%;
+  }
+  .modal__box {
+    width: 50%;
+  }
+  .modal__message {
+    font-size: 1.5rem;
   }
   .divider {
     width: 1px;
@@ -1232,6 +1233,12 @@ i {
   }
   .about__text {
     padding: 3em 0em;
+  }
+  .modal__box {
+    width: 40%;
+  }
+  .modal__message {
+    font-size: 1.5rem;
   }
   .divider {
     width: 1px;
