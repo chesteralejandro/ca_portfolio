@@ -1,4 +1,8 @@
-/** ANIMATE THE BURGER **/
+/** 
+    ANIMATE THE BURGER: This function will toggle the the different CSS classes for each line
+    of the burger button.
+    Developed By: Chester Alejandro.
+**/
 const burgerAnimate = () => {
     const burgerLine = document.querySelectorAll('.navigation__burger-line');
     burgerLine[0].classList.toggle('navigation__burger-line--top');
@@ -6,7 +10,9 @@ const burgerAnimate = () => {
     burgerLine[2].classList.toggle('navigation__burger-line--bottom');
 }
 
-/** THESE ARE THE SLIDE IN/OUT FUNCTIONS OF THE MENU **/
+/** 
+    THESE ARE THE SLIDE IN/OUT FUNCTIONS OF THE MENU
+**/
 const menu = document.querySelector('.navigation__link');
 const linkItems = document.querySelectorAll('.navigation__list');
     //THIS IS THE SLIDE IN FUNCTION
@@ -36,7 +42,9 @@ const linkAreaSlideOut = () => {
      })
 }
 
-/** ACTIVATE THE SLIDE IN/OUT FUNCTIONS OF THE MENU WHEN CLICKING THE HAMBURGER **/
+/** 
+    ACTIVATE THE SLIDE IN/OUT FUNCTIONS OF THE MENU WHEN CLICKING THE HAMBURGER 
+**/
 let isBurger = true;
 const burger = document.querySelector('.navigation__burger');
 burger.addEventListener('click', e => {
@@ -53,7 +61,11 @@ burger.addEventListener('click', e => {
     })
 })
 
-/** SLIDE OUT THE MENU WHEN YOU CLICK ANY LINK **/
+/** 
+    SLIDE OUT THE MENU WHEN YOU CLICK ANY LINK: This will slide the menu out when any of the navigation links or the logo
+    is clicked or tapped when in mobile view.
+    Developed By: Chester Alejandro.
+**/
 const logo = document.querySelector('.navigation__logo')
 const mainLinks = document.querySelectorAll('.navigation__anchor');
 logo.addEventListener('click', () => {
@@ -71,10 +83,14 @@ mainLinks.forEach(mainLink => mainLink.addEventListener('click', () => {
     }
 }));
 
-/** THIS IS FOR THE TYPEWRITTER EFFECT **/
+/** 
+    THIS IS FOR THE TYPEWRITTER EFFECT: This function will automatically be invoked when the page
+    sucessfully loads. It will create a type
+    Developed By: Chester Alejandro.
+**/
 function typewritter(){
     const cursor = document.querySelector('.banner__cursor');
-    const title = ['Programmer.', 'Web Developer.', 'Web Designer.', 'Backend Developer.'];
+    const title = ['Web Developer.', 'Front-End Developer.', 'Back-End Developer.'];
     let word = ''; 
     let setWord = '';
     let index = 0;
@@ -108,7 +124,10 @@ function typewritter(){
 } typewritter();
 
 
-/** THIS IS FOR THE CAROUSEL **/
+/** 
+    THE CAROUSEL: This function is for the image carousel
+    Developed By: Chester Alejandro.
+**/
 let index = 0;
 function slide() {
     const radios = document.querySelectorAll('.about__radio');
@@ -136,7 +155,7 @@ setInterval(() => {
             buttons.forEach(button => button.classList.add('block'));
             setTimeout(() => buttons.forEach(button => button.classList.remove('block')), 1500);
         }
-    }))
+    }));
     counter++; //console.log(counter, index);
     if(counter >= timer) {
         slide();
@@ -151,7 +170,10 @@ setInterval(() => {
 }, 1000);
 
 
-/** ANY EFFECTS THAT IS CONNECTED TO SCROLL EVENT **/
+/**
+    ANY EFFECTS THAT IS CONNECTED TO SCROLL EVENT
+    Developed By: Chester Alejandro.
+**/
 const mainNavigation = document.querySelector('.navigation');
 window.addEventListener("scroll", () => {
     let scroll = window.pageYOffset;
@@ -186,13 +208,17 @@ window.addEventListener("scroll", () => {
 })
 
 
-/** THESE VARIABLES ARE FOR THE MODAL **/
+/** 
+    THESE VARIABLES ARE FOR THE MODAL
+**/
 const modal = document.querySelector('.modal');
 const modalBox = document.querySelector('.modal__box');
 const modalButton = document.querySelector('.modal__button');
 const modalMessage = document.querySelector('.modal__message');
 
-/** THESE VARIABLES ARE FOR CONTACT FORM **/
+/** 
+    THESE VARIABLES ARE FOR CONTACT FORM 
+**/
 const nameField = document.getElementById('contact__name');
 const emailField = document.getElementById('contact__email');
 const messageField = document.getElementById('contact__message');

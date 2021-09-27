@@ -108,3 +108,7 @@ window.addEventListener('scroll', function(){
     });
 
 }) //SCROLL LISTENER
+
+/*
+  Developed By: Chester M Alejandro
+*/
