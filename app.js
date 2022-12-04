@@ -234,7 +234,7 @@ submit.addEventListener('click', e => {
     if(nameField.value == '' && emailField.value == '' && messageField.value == '') {
         modalMessage.innerHTML = '<h3 class="modal__message">Please say something to me.</h3>';
     } else if (nameField.value == '') {
-        modalMessage.innerText = '<h3 class="modal__message">What is your name?</h3>';
+        modalMessage.innerHTML = '<h3 class="modal__message">What is your name?</h3>';
     } else if (emailField.value == '') {
         modalMessage.innerHTML = '<h3 class="modal__message">Please provide your email address.</h3>';
     } else if (messageField.value == '') {
